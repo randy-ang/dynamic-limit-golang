@@ -8,3 +8,12 @@ We execute 2 goroutine functions:
     - the data processing module will process another data (repeat no. 2)
 
 By implementing this, we don't need to set a hard limit when trying to avoid timeout. This way, when saving to database, if the database is slightly slower than usual, the timeout will not be triggered because no hard limit is set.
+
+go run example.go:
+- case where saving data has no delays
+
+go run example_2.go:
+- case where saving data has a delay
+
+go run example_3.go:
+- example_2 but with maximum number of data to be processed rather than timeout
